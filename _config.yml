@@ -4,8 +4,8 @@
 
 # Site
 title: Codan's Blog
-subtitle: NB
-description: 摸摸鱼~
+subtitle: 前端搬砖工
+description: 摸摸鱼
 keywords:
 author: 张熠
 language:
@@ -79,3 +79,5 @@ theme: huno
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
+  repo: https://github.com/CrazyOctopusDan/crazyoctopusdan.github.io.git
+  branch: master
