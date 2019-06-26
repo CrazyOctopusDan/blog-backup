@@ -8,7 +8,7 @@ menu:
 favicon: /favicon.png
 
 # Site logo
-# logo: /avatar.png
+logo: /avatar.png
 
 # Enable Mathjax
 mathjax: true
@@ -18,3 +18,7 @@ awesome_toc: true
 
 # Enable githubRepoWidget
 github_repo_widget: false
+
+# Social
+social:
+  github: someus
