@@ -4,7 +4,7 @@ date: 2019-05-1 20:10:04
 tags: React
 ---
 
-# 深入理解 React 虚拟DOM
+## 深入理解 React 虚拟DOM
 ### 为什么我需要（React-virtual-dom）？
 
 产品的功能源自需求，react 作为一个成功的UI库也是如此。
@@ -229,6 +229,8 @@ A B 【F】 C D E
 
 如果我们在JSX里为数组或枚举型元素增加上key后，React就能根据key，直接找到具体的位置进行操作，效率比较高。
 
+>  Keys should be "stable, predictable, and unique." 所以不建议在使用key的时候，简单地使用上数组的index属性，那个玩意儿会带来巨大的坑。
+
 ![](http://ww1.sinaimg.cn/large/006tNc79ly1g4f08h182lj30s609ejsa.jpg)
 
 > 因此就变成了最小编辑距离问题，可以用Levenshtein Distance算法来实现，时间复杂度是O(M*N)，但通常我们只要一些简单的移动就能满足需要，降低点精确性，将时间复杂度降低到O(max(M, N)即可。
@@ -304,10 +306,10 @@ A B 【F】 C D E
 
 这个时候呼应开头了，虚拟DOM的目的是将所有操作累加起来，统计计算出所有的变化后，统一更新一次DOM，以上大概就是全部解析内容了。
 
-### TODO React Viber
+### TODO React Fiber
 这个还没学完
 
-# 参考文献
+## 参考文献
 [What is the Virtual DOM?「React官网」](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom)
 [深入浅出React： 虚拟DOM Diff 算法解析](https://www.infoq.cn/article/react-dom-diff/)
 链接挂掉了几个
