@@ -15,15 +15,15 @@
 
 # Main menu navigation
 menu:
-  Home: /
-  Archives: /archives
-  Tags: /tags
-  Categories: /categories
+  主页: /
+  归档: /archives
+  标签: /tags
+  分类: /categories
   #XXX: /xxx
 
 # Favicon
 # ---------------
-favicon: /melody-favicon.ico
+favicon: /img/zhangyi.png
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -41,16 +41,17 @@ pwa:
 
 # Highlight theme
 # ---------------
-highlight_theme: default
+highlight_theme: ocean
 
-# code_word_wrap: true or false
+code_word_wrap: true
 
 # Nav settings
 # see the icon_name in fontawesome website.
 # And you need to add the `fa` or `fab` prefix by your self.
 # ---------------
 social:
-github fa: https://github.com/Molunerfinn
+  github fa: https://github.com/crazyoctopusdan
+  gitlab fa: https://gitlab.com/CrazyOctopusDan
 #icon_name fab: url
 
 # Algolia search
@@ -64,7 +65,7 @@ algolia_search:
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/third-party-support?id=local-search
 # ---------------
 local_search:
-  enable: false
+  enable: true
 
 # MathJax
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/third-party-support?id=mathjax
@@ -79,6 +80,8 @@ katex:
   enable: false
   cdn:
     css: https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css
+    fontawesome: https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
+    fontawesomev5: https://use.fontawesome.com/releases/v5.7.2/css/all.css
 
 # Toggle fireworks (IE >= 10)
 # ---------------
@@ -124,7 +127,7 @@ cdn:
 
 # Post info settings
 # ---------------
-avatar:
+avatar: http://ww1.sinaimg.cn/large/006tNc79ly1g4mh0h5ecmj30uv0u0e82.jpg
 
 top_img: true # false or url of img
 
@@ -135,7 +138,7 @@ post_meta:
 
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/additional-package-support?id=word-counting
 wordcount:
-  enable: false
+  enable: true
 
 toc:
   enable: true
@@ -169,8 +172,11 @@ slide:
 
 # QR_code:
 # - itemlist:
-#     img:
-#     text:
+#       img: https://xxxx1.jpg
+#       text: 支付宝打赏
+# - itemlist:
+#       img: https://xxxx2.jpg
+#       text: 微信打赏
 
 # adv:
 # enable: false
@@ -227,9 +233,9 @@ disqus:
 
 # Footer Settings
 # ---------------
-since: 2013
+since: 2018
 
-# footer_custom_text:
+footer_custom_text: 欢迎来到Codan的博客 | <i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:contactcodan@163.com">contactcodan@163.com</a> | <i class="fa fa-weixin" aria-hidden="true"></i>zy840271360
 
 ICP:
   enable: false
@@ -254,15 +260,16 @@ busuanzi:
 
 # Sidebar Settings
 # ---------------
-#links_title: Links
-#links:
-#Name: url
+links_title: 友链
+links:
+  陈师傅: https://zcxb.github.io
+  康师傅: https://www.yongsheng.us
 
 # Follow Me Button
-# follow:
-#   enable: true
-#   url: ''
-#   text: ''
+follow:
+  enable: true
+  url: 'https://github.com/crazyoctopusdan'
+  text: 'Follow Me'
 
 # Ads
 # ---------------

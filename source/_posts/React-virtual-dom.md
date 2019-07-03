@@ -2,6 +2,7 @@
 title: React虚拟DOM 深入学习
 date: 2019-05-1 20:10:04
 tags: React
+top: True
 ---
 
 ## 深入理解 React 虚拟DOM
@@ -35,6 +36,8 @@ tags: React
 
 提升如何？
 其实并不明显
+
+<!-- more -->
 
 React方案改进
 ...2

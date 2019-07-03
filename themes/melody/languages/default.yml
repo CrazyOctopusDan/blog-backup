@@ -1,49 +1,49 @@
 sidebar:
-  articles: Articles
-  tags: Tags
-  categories: Categories
-  toggle_site: Toggle site
-  toggle_article: Toggle article
-  catalog: Catalog
-  have_read: You've read
+  articles: 文章
+  tags: 标签
+  categories: 分类
+  toggle_site: 网站信息
+  toggle_article: 文章信息
+  catalog: 目录
+  have_read: 你已阅读了
 
 footer:
   driven: Driven
   theme: Theme
 
 copy:
-  success: Copy successfully
-  error: Copy error
-  noSupport: The browser does not support
+  success: 复制成功！
+  error: 复制失败了
+  noSupport: 当前浏览器并不支持~
 
 page:
-  articles: Articles
-  tag: Tag
-  category: Category
-  archives: Archives
+  articles: 文章
+  tag: 标签
+  category: 分类
+  archives: 归档
 
-sticky: Sticky
-no_title: No title
-read_more: Read more
+sticky: 置顶
+no_title: 无标题
+read_more: 进入阅读
 
 post:
-  wordcount: Word count
-  min2read: 'Reading time: %s min'
+  wordcount: 本文字数
+  min2read: '阅读时间: %s 分钟'
   copyright:
-    author: Author
-    link: Link
+    author: 张熠
+    link: 文章链接
     copyright_notice: Copyright Notice
     copyright_content: 'All articles in this blog are licensed under <a href="%s">%s</a> unless stating additionally.'
 
 
-search: Search
+search: 搜索
 algolia_search:
   input_placeholder: Search for Posts
   hits_empty: "We didn't find any results for the search: ${query}."
   hits_stats: "${hits} results found in ${time} ms"
 
 local_search:
-  label: Local search
-  input_placeholder: Search for Posts
-  hits_empty: "We didn't find any results for the search: ${query}"
+  label: 文章搜索
+  input_placeholder: 搜索封面标题(-^〇^-)
+  hits_empty: "╥﹏╥木有找到: ${query}"
   powered_by: Powered by
