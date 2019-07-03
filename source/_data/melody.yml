@@ -85,7 +85,7 @@ katex:
 
 # Toggle fireworks (IE >= 10)
 # ---------------
-fireworks: false
+fireworks: true
 
 # Analysis
 # ---------------
@@ -188,9 +188,10 @@ addThis:
   enable: false
   #pubid:
 
-# sharejs:
-# enable: false
-# disabled_sites:
+sharejs:
+enable: true
+disabled_sites: google,facebook,twitter
+# qzone,qq,weibo,wechat,douban
 
 # Comments System
 # ---------------

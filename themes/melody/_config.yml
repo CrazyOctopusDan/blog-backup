@@ -182,8 +182,9 @@ addThis:
   enable: false
   #pubid:
 
-# sharejs:
-# enable: false
+sharejs:
+enable: true
+disabled_sites: google,facebook,twitter
 # disabled_sites:
 
 # Comments System

@@ -30,7 +30,7 @@ post:
   wordcount: 本文字数
   min2read: '阅读时间: %s 分钟'
   copyright:
-    author: 张熠
+    author: 作者
     link: 文章链接
     copyright_notice: Copyright Notice
     copyright_content: 'All articles in this blog are licensed under <a href="%s">%s</a> unless stating additionally.'
