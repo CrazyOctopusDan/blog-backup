@@ -32,8 +32,6 @@ Native Server Render
 是一个没有Virtualdom的，但是最小组件还保留的React实现；
 只有1KB；
 
-<!-- more -->
-
 ---
 
 # Bilibili

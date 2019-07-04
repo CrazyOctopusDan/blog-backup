@@ -43,7 +43,7 @@ pwa:
 # ---------------
 highlight_theme: ocean
 
-code_word_wrap: true
+code_word_wrap: false
 
 # Nav settings
 # see the icon_name in fontawesome website.
@@ -151,8 +151,8 @@ post_copyright:
 
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/theme-config?id=auto-excerpt
 auto_excerpt:
-  enable: false
-  length: 150
+  enable: true
+  length: 233
 
 # slide
 # For reveal.js config, see https://github.com/hakimel/reveal.js#configuration
@@ -185,7 +185,7 @@ slide:
 # Share System
 # ---------------
 addThis:
-  enable: false
+  enable: true
   #pubid:
 
 sharejs:

@@ -26,8 +26,6 @@ React Fiber 的目标是提高其适合动画、布局和手势等区域的能�
 *  [React基本理论概念](https://github.com/reactjs/react-basic) - 无实现负担的响应概念模型的描述。其中一些在一读时可能没有意义。没关系，随着时间的推移，它更有意义。
 *  [React设计原则](https://zh-hans.reactjs.org/docs/design-principles.html) - 特别注意[协调](https://zh-hans.reactjs.org/docs/design-principles.html#scheduling)部分。它做了很好的解释React Fiber的原因。
 
-<!-- more -->
-
 # 回顾
 
 -------
