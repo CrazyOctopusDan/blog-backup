@@ -4,9 +4,7 @@ date: 2019-05-1 20:10:04
 tags: React
 top: True
 ---
-
-## 深入理解 React 虚拟DOM
-### 为什么我需要（React-virtual-dom）？
+# 为什么我需要（React-virtual-dom）？
 
 产品的功能源自需求，react 作为一个成功的UI库也是如此。
 
@@ -51,7 +49,7 @@ React方案改进
 * 甚至使得跨端应用成为现实，RN（React Native）得到广泛使用。为什么呢？因为原生应用里不存在DOM这个概念，
 但是虚拟DOM这个思想，这个简单的js对象是完全可以正常跑通的，因此，只需要在执行环境中判断出是在Browser还是App中，就可以使React开发多端应用。
 
-### 都9102年了，你凭什么还说我们浏览器慢？
+# 都9102年了，你凭什么还说我们浏览器慢？
 先来看一看浏览器加载HTML文件都需要做什么：
 ![BrowserPaint](http://ww3.sinaimg.cn/large/006tNc79ly1g4evhx81ttj30ho089dgf.jpg)
 
@@ -71,7 +69,7 @@ React方案改进
 
 那怕是一个小小的div，都有如此多的属性，那么整个DOM树有多少，想想都害怕。
 
-### 什么是虚拟Dom呢？
+# 什么是虚拟Dom呢？
 虚拟DOM是一个描述真实DOM的简单js对象
 
 回到上面那个问题中，加入一次操作中有10个更新DOM的操作，那么我虚拟DOM不会像普通浏览器那样傻傻的立即操作，而是将10次更新内容的diff保存到本地的一个js对象中，最终将这个js对象一次性attach到DOM树上，通知浏览器，你好去paint了，这样就可以极大程度上节约计算成本，避免无谓的计算，好钢要用在刀刃上。
@@ -92,30 +90,30 @@ const VirtualDomTree = Element('div', { id: 'virtual-container' }, [
 那再具体一点，到底是怎么实现的呢？
 
 ```Javascript
-/**
-* @param tagName 节点名
-* @param props 节点的属性
-* @param children 子节点
-**/
-function Element(tagName, props, children) {
-    if (!(this instanceof Element)) {
-        return new Element(tagName, props, children);
-    }
-
-    this.tagName = tagName;
-    this.props = props || {};
-    this.children = children || [];
-    this.key = props ? props.key : undefined;
-
-    let count = 0;
-    this.children.forEach((child) => {
-        if (child instanceof Element) {
-            count += child.count;
+    /**
+    * @param tagName 节点名
+    * @param props 节点的属性
+    * @param children 子节点
+    **/
+    function Element(tagName, props, children) {
+        if (!(this instanceof Element)) {
+            return new Element(tagName, props, children);
         }
-        count++;
-    });
-    this.count = count;
-}
+
+        this.tagName = tagName;
+        this.props = props || {};
+        this.children = children || [];
+        this.key = props ? props.key : undefined;
+
+        let count = 0;
+        this.children.forEach((child) => {
+            if (child instanceof Element) {
+                count += child.count;
+            }
+            count++;
+        });
+        this.count = count;
+    }
 ```
 
 > 除了以上三个参数之外还会保存key和count
@@ -143,7 +141,7 @@ OK，到了这一步还没有结束，等到有了js对象之后，还需要将�
 
 根据DOM名调用源生的createElement创建真实DOM，将DOM的属性全都加到这个DOM元素上，如果有子元素继续递归调用创建子元素，并appendChild挂到该DOM元素上。这样就完成了从创建虚拟DOM到将其映射成真实DOM的全部工作。
 
-### 神秘的Diff算法
+# 神秘的Diff算法
 
 这个玩意儿算是面试总会问到的。
 
@@ -217,7 +215,7 @@ diff算法中只会比较同层级的元素，一旦发现某一级之间有所�
 
 具体可以看 [虚拟DOM 算法解析](https://www.infoq.cn/article/react-dom-diff/)
 
-#### 列表渲染的元素，你如果不加key，我就嗷嗷叫……
+## 列表渲染的元素，你如果不加key，我就嗷嗷叫……
 
 ![](http://ww3.sinaimg.cn/large/006tNc79ly1g4ezut9k77j310a02uwfs.jpg)
 这个warning，vue和react都会报。他们强烈建议开发者，拜托你在写通过数组循环渲染item的时候，一定要加上key，不然我们在虚拟DOM比较的时候就只能进行两层循环，才知道什么发生改变了，你们开发者如果加上了key，那我们就可以非常快速且清晰地比较出新增和删除了什么东西！
@@ -251,7 +249,7 @@ A B 【F】 C D E
     }
 ```
 
-### 最终映射到真实DOM中
+## 最终映射到真实DOM中
 
 深度遍历DOM将Diff的内容更新进去：
 
@@ -309,10 +307,10 @@ A B 【F】 C D E
 
 这个时候呼应开头了，虚拟DOM的目的是将所有操作累加起来，统计计算出所有的变化后，统一更新一次DOM，以上大概就是全部解析内容了。
 
-### TODO React Fiber
-这个还没学完
+# React Fiber
+请看下一篇我的博客《React-Fiber学习笔记》
 
-## 参考文献
+# 参考文献
 [What is the Virtual DOM?「React官网」](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom)
 [深入浅出React： 虚拟DOM Diff 算法解析](https://www.infoq.cn/article/react-dom-diff/)
 链接挂掉了几个
