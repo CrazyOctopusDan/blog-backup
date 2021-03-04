@@ -2,7 +2,7 @@
 title: React虚拟DOM 深入学习
 date: 2019-05-1 20:10:04
 tags: React
-top: True
+# top: True
 ---
 # 为什么我需要（React-virtual-dom）？
 
